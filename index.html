@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sumit Kumar – Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F9;--surface:#fff;--ink:#14213D;--muted:#55607A;--line:#DDE2EC;--accent:#2F5BEA;--accent-soft:#E3EAFE;--mint:#0E9F6E;--code:#101A33;--code-ink:#C9D5F5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1324;--surface:#151D33;--ink:#EAF0FF;--muted:#9AA7C7;--line:#26314D;--accent:#7C9BFF;--accent-soft:#1D2A52;--mint:#3DD9A0;--code:#0A0F1E;--code-ink:#C9D5F5}}
+:root[data-theme="dark"]{--bg:#0D1324;--surface:#151D33;--ink:#EAF0FF;--muted:#9AA7C7;--line:#26314D;--accent:#7C9BFF;--accent-soft:#1D2A52;--mint:#3DD9A0;--code:#0A0F1E;--code-ink:#C9D5F5}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
+@media(max-width:720px){nav ul{display:none}}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.88rem;padding:6px 14px;border-radius:99px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.status i{animation:none}html{scroll-behavior:auto}}
+h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:800;letter-spacing:-.03em;margin:20px 0 14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px);transition:transform .15s}
+.code{background:var(--code);color:var(--code-ink);border-radius:16px;padding:22px 24px;font:500 .86rem/1.8 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;box-shadow:0 20px 50px -20px rgba(20,33,61,.5);overflow-x:auto}
+.code .dots{display:flex;gap:6px;margin-bottom:14px}.code .dots i{width:11px;height:11px;border-radius:50%;background:#3A466B}
+.k{color:#7C9BFF}.s{color:#6EE7B7}.c{color:#7382A8}
+section{padding:64px 0}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:60ch}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{margin:0 0 14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--accent-soft);color:var(--accent);font-size:.82rem;font-weight:600;padding:4px 11px;border-radius:99px}
+.proj{border-top:4px solid var(--accent)}
+.proj:nth-child(2){border-top-color:var(--mint)}.proj:nth-child(3){border-top-color:#E4A11B}
+.proj ul{margin:0 0 18px;padding-left:18px;color:var(--muted)}
+.skill{display:grid;grid-template-columns:190px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.skill:last-child{border:0}.skill span{font-weight:600}
+@media(max-width:600px){.skill{grid-template-columns:1fr}}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:28px}
+.tl article{position:relative;padding-bottom:28px}
+.tl article:before{content:"";position:absolute;left:-36px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl time{color:var(--accent);font-weight:600;font-size:.9rem}
+.tl h3{font-size:1.2rem;margin:2px 0}.tl p{margin:0;color:var(--muted)}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.list li{color:var(--muted)}.list b{color:var(--ink)}
+.contact{text-align:center;background:var(--code);color:var(--code-ink);border-radius:24px;padding:56px 24px}
+.contact h2{color:#fff}.contact p{margin:0 auto 26px;max-width:46ch}
+.contact .btn{border-color:#C9D5F5;color:#fff}.contact .btn.primary{background:#fff;color:#14213D}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:32px 0 40px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Sumit Kumar</b>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#journey">Journey</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<span class="status"><i></i>Open to full stack roles</span>
+<h1>Sumit Kumar</h1>
+<p class="lead">Full Stack Developer building fast, responsive web apps with React and Django, backed by an AI &amp; Machine Learning degree.</p>
+<div class="btns"><a class="btn primary" href="#projects">View projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="code" aria-label="Developer profile summary">
+<div class="dots"><i></i><i></i><i></i></div>
+<div><span class="k">const</span> sumit = {</div>
+<div>&nbsp;&nbsp;role: <span class="s">"Full Stack Developer"</span>,</div>
+<div>&nbsp;&nbsp;frontend: [<span class="s">"React"</span>, <span class="s">"JavaScript"</span>, <span class="s">"Tailwind"</span>],</div>
+<div>&nbsp;&nbsp;backend: [<span class="s">"Django"</span>, <span class="s">"REST"</span>, <span class="s">"SQL"</span>],</div>
+<div>&nbsp;&nbsp;also: [<span class="s">"OpenCV"</span>, <span class="s">"CNN"</span>, <span class="s">"Scikit-Learn"</span>],</div>
+<div>&nbsp;&nbsp;degree: <span class="s">"B.Tech AI &amp; ML, 2025"</span></div>
+<div>};</div>
+</div>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>About</h2>
+<p class="sub">Hands-on experience across the full stack, with a focus on clean APIs and interfaces that feel quick.</p>
+<div class="grid g3">
+<div class="card"><h3>Full stack builds</h3><p>Built e-commerce and food delivery apps with authentication, REST APIs and a React frontend.</p></div>
+<div class="card"><h3>Performance-minded</h3><p>Strong understanding of frontend performance, responsive design and backend fundamentals.</p></div>
+<div class="card"><h3>ML and computer vision</h3><p>Working knowledge of machine learning, shown in a face and voice biometric authentication project.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="sub">The tools I use to design, build and ship.</p>
+<div class="card">
+<div class="skill"><span>Programming languages</span><ul class="chips"><li>Python</li><li>SQL</li><li>JavaScript</li></ul></div>
+<div class="skill"><span>Frameworks and libraries</span><ul class="chips"><li>Django</li><li>React</li><li>Pandas</li></ul></div>
+<div class="skill"><span>Frontend</span><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li><li>Tailwind CSS</li></ul></div>
+<div class="skill"><span>Tools and databases</span><ul class="chips"><li>Git</li><li>SQL</li></ul></div>
+<div class="skill"><span>Soft skills</span><ul class="chips"><li>Teamwork</li><li>Collaboration</li></ul></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">Three projects covering web apps and applied machine learning.</p>
+<div class="grid g3">
+<article class="card proj"><h3>Digital Shopping Platform</h3>
+<ul><li>Full-stack e-commerce app with user authentication and product management.</li><li>Complete cart and checkout system.</li><li>Secure Django APIs with a responsive React frontend.</li></ul>
+<ul class="chips"><li>Python</li><li>Django</li><li>React</li><li>SQL</li><li>REST API</li><li>Tailwind CSS</li></ul></article>
+<article class="card proj"><h3>Food Delivery Application</h3>
+<ul><li>Separate frontend and backend architecture.</li><li>REST APIs with restaurant listings, menu display and cart.</li><li>JWT-based authentication.</li></ul>
+<ul class="chips"><li>React (Vite)</li><li>Django</li><li>DRF</li><li>SQL</li><li>JWT</li></ul></article>
+<article class="card proj"><h3>Virtual SmartBioAuth Intelligence System</h3>
+<ul><li>Secure biometric login using real-time face recognition.</li><li>Voice-command processing for multi-modal user identification.</li></ul>
+<ul class="chips"><li>Python</li><li>OpenCV</li><li>CNN</li><li>Speech Recognition</li><li>NumPy</li><li>Scikit-Learn</li></ul></article>
+</div></div></section>
+
+<section id="journey"><div class="wrap">
+<h2>Journey</h2>
+<p class="sub">Education, training and recognition.</p>
+<div class="grid g2">
+<div>
+<div class="tl">
+<article><time>2021 – 2025</time><h3>B.Tech, Artificial Intelligence and Machine Learning</h3><p>Sagar Institute of Research and Technology, Bhopal. Coursework: Machine Learning, Deep Learning, Data Structures, Computer Vision.</p></article>
+<article><time>Training</time><h3>Python Full Stack Development</h3><p>QSpiders. Core and advanced Python, Django and REST APIs, frontend with HTML, CSS and JavaScript, plus hands-on full stack projects.</p></article>
+<article><time>2017 – 2020</time><h3>Higher Secondary School</h3><p>Nirsu Narain College, Singhara, Bihar. Non-medical science subjects.</p></article>
+</div></div>
+<div class="grid">
+<div class="card"><h3>Achievements</h3><ul class="list">
+<li>Cleared the selection rounds of the <b>Re-Imagine National Level Hackathon</b> by Sheryians Coding School as a Full-Stack Developer.</li>
+<li>Coordinated college fest events, building teamwork and project management skills.</li></ul></div>
+<div class="card"><h3>Certifications</h3><ul class="list">
+<li><b>Python Programming:</b> core and advanced, Sheryians Coding School.</li>
+<li><b>Django Workshop:</b> built a web project with Cybrom Technologies.</li>
+<li><b>Data Analytics Workshop:</b> Geeks of Gurukul.</li>
+<li><b>MERN Certification:</b> React frontend with backend, Sheryians Coding School.</li></ul></div>
+</div></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact">
+<h2>Let's build something together</h2>
+<p>I'm looking for full stack roles where I can ship real products. Send me a message and I'll reply soon.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn primary" href="mailto:sumit31aug2002@gmail.com">Email me</a>
+<a class="btn" href="tel:+918434331861">+91 84343 31861</a>
+<a class="btn" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/" rel="noopener">GitHub</a>
+</div></div></div></section>
+
+<footer>© 2026 Sumit Kumar</footer>
+</body>
+</html>
